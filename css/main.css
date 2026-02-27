@@ -804,22 +804,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .portfolio-card:hover .portfolio-img-bg { transform: scale(1.06); }
 
-/* Individual project gradients */
-.portfolio-img-bg--1  { background: linear-gradient(135deg, #0D2039 0%, #1A3A5C 50%, #2D5F8A 100%); }
-.portfolio-img-bg--2  { background: linear-gradient(135deg, #0A2040 0%, #163358 50%, #1E4573 100%); }
-.portfolio-img-bg--3  { background: linear-gradient(160deg, #05111F 0%, #0A1E33 40%, #E84422 100%); }
-.portfolio-img-bg--4  { background: linear-gradient(160deg, #05111F 0%, #0A1E33 40%, #B33010 100%); }
-.portfolio-img-bg--5  { background: linear-gradient(135deg, #101828 0%, #1B3050 50%, #2A4A6E 100%); }
-.portfolio-img-bg--6  { background: linear-gradient(155deg, #0A1628 0%, #122040 40%, #E84422 100%); }
-.portfolio-img-bg--7  { background: linear-gradient(135deg, #0D1F32 0%, #193652 50%, #2C5278 100%); }
-.portfolio-img-bg--8  { background: linear-gradient(150deg, #05111F 0%, #0D2038 40%, #1B4060 100%); }
-.portfolio-img-bg--9  { background: linear-gradient(135deg, #0A1628 0%, #152538 50%, #D44020 100%); }
-.portfolio-img-bg--10 { background: linear-gradient(150deg, #05111F 0%, #0C1E33 40%, #1E3852 100%); }
-.portfolio-img-bg--11 { background: linear-gradient(135deg, #0A1825 0%, #122033 50%, #1E3A50 100%); }
-.portfolio-img-bg--12 { background: linear-gradient(155deg, #05101C 0%, #0A1D30 40%, #C43A18 100%); }
-.portfolio-img-bg--13 { background: linear-gradient(135deg, #0E1E30 0%, #1A3046 50%, #264260 100%); }
-.portfolio-img-bg--14 { background: linear-gradient(155deg, #040D18 0%, #081525 40%, #E84422 100%); }
-.portfolio-img-bg--15 { background: linear-gradient(135deg, #080F1A 0%, #0E1E2E 50%, #1E3A55 100%); }
+/* Individual project backgrounds */
+.portfolio-img-bg--1  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Tallink_Star_Helsinki-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--2  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Baltic-princess-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--3  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Oasis_of_the_seas-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--4  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Allure_of_the_Seas.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--5  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/MEIN_SCHIFF_Turku-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--6  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Quantum_of_the_Seas-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--7  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/AIDA_project_Mitsubishi_Nagasaki.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--8  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Costa_Smeralda-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--9  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Mardi_Gras-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--10 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Costa_Toscana-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--11 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Vega-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--12 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Carnival_Celebration-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--13 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Diana.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--14 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Icon_of_the_Seas-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--15 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Mein_Schiff_7.jpg'); background-size: cover; background-position: center; }
 .portfolio-img-bg--16 { background: linear-gradient(135deg, #060E18 0%, #0C1A28 50%, #1A2E42 100%); }
 .portfolio-img-bg--17 { background: linear-gradient(155deg, #040C17 0%, #081422 40%, #E84422 100%); }
 .portfolio-img-bg--18 { background: linear-gradient(155deg, #04090F 0%, #08111A 40%, #E84422 100%); }
