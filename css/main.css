@@ -364,7 +364,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   justify-content: center;
   background:
     linear-gradient(to bottom, rgba(5, 10, 20, 0.50) 0%, rgba(5, 10, 20, 0.70) 100%),
-    url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/seaview.png') center center / cover no-repeat;
+    url('../images/seaview.png') center center / cover no-repeat;
   overflow: hidden;
   padding-top: 80px;
   padding-bottom: 40px;
