@@ -257,13 +257,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 36px;
   width: auto;
   display: block;
-  /* white + drop-shadow so it pops on the photo background */
-  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55));
-  transition: filter 0.4s ease;
+  transition: opacity 0.3s ease;
 }
-.site-header.scrolled .logo-img {
-  filter: none;
-}
+/* White logo shown by default (hero/dark bg); red shown on scrolled white header */
+.logo-img--dark { display: none; }
+.site-header.scrolled .logo-img--light { display: none; }
+.site-header.scrolled .logo-img--dark  { display: block; }
 /* Fallback text logo (hidden when image loads) */
 .logo-mark {
   width: 36px;
@@ -357,7 +356,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ── HERO ───────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 62vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -366,8 +365,20 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     linear-gradient(to bottom, rgba(5, 10, 20, 0.50) 0%, rgba(5, 10, 20, 0.70) 100%),
     url('../images/seaview.jpg') center center / cover no-repeat;
   overflow: hidden;
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 2rem;
 }
 
 /* Dark gradient at top so the nav stays readable */
@@ -397,18 +408,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .hero-content {
-  position: relative;
-  z-index: 5;
-  text-align: center;
-  max-width: 820px;
-  padding: 0 2rem;
-  padding-top: 2rem;
+  text-align: left;
 }
 
 .hero-eyebrow {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
   font-family: var(--font-head);
   font-size: 0.78rem;
@@ -446,15 +452,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 1.05rem;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.88);
-  max-width: 580px;
-  margin: 0 auto 2rem;
+  max-width: 520px;
+  margin: 0 0 2rem;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -463,21 +469,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: relative;
   z-index: 5;
   display: flex;
+  flex-direction: column;
   align-items: center;
   background: rgba(0, 0, 0, 0.30);
   border: 1px solid rgba(255, 255, 255, 0.20);
   border-radius: var(--radius-lg);
   backdrop-filter: blur(12px);
-  padding: 1.2rem 2.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  min-width: 180px;
 }
 .hero-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-  padding: 0 2.5rem;
+  padding: 1.5rem 2.5rem;
+  width: 100%;
 }
 .hero-stat__number {
   font-family: var(--font-head);
@@ -495,7 +504,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: rgba(255, 255, 255, 0.65);
 }
 .hero-stat-divider {
-  width: 1px; height: 50px;
+  width: 60%; height: 1px;
   background: rgba(255, 255, 255, 0.25);
 }
 
@@ -816,24 +825,21 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .portfolio-card:hover .portfolio-img-bg { transform: scale(1.06); }
 
 /* Individual project backgrounds */
-.portfolio-img-bg--1  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Tallink_Star_Helsinki-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--2  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Baltic-princess-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--3  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Oasis_of_the_seas-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--4  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Allure_of_the_Seas.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--5  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/MEIN_SCHIFF_Turku-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--6  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Quantum_of_the_Seas-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--7  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/AIDA_project_Mitsubishi_Nagasaki.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--8  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Costa_Smeralda-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--9  { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Mardi_Gras-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--10 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Costa_Toscana-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--11 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Vega-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--12 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Carnival_Celebration-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--13 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Diana.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--14 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Icon_of_the_Seas-scaled.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--15 { background-image: url('https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2026/02/Mein_Schiff_7.jpg'); background-size: cover; background-position: center; }
-.portfolio-img-bg--16 { background: linear-gradient(135deg, #060E18 0%, #0C1A28 50%, #1A2E42 100%); }
-.portfolio-img-bg--17 { background: linear-gradient(155deg, #040C17 0%, #081422 40%, #E84422 100%); }
-.portfolio-img-bg--18 { background: linear-gradient(155deg, #04090F 0%, #08111A 40%, #E84422 100%); }
+.portfolio-img-bg--1  { background-image: url('../images/portfolio/Tallink_Star_Helsinki-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--2  { background-image: url('../images/portfolio/Baltic-princess-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--3  { background-image: url('../images/portfolio/Oasis_of_the_seas-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--4  { background-image: url('../images/portfolio/Allure_of_the_Seas.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--5  { background-image: url('../images/portfolio/MEIN_SCHIFF_Turku-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--6  { background-image: url('../images/portfolio/Quantum_of_the_Seas-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--7  { background-image: url('../images/portfolio/AIDA_project_Mitsubishi_Nagasaki.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--8  { background-image: url('../images/portfolio/Costa_Smeralda-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--9  { background-image: url('../images/portfolio/Mardi_Gras-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--10 { background-image: url('../images/portfolio/Costa_Toscana-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--11 { background-image: url('../images/portfolio/Vega-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--12 { background-image: url('../images/portfolio/Carnival_Celebration-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--13 { background-image: url('../images/portfolio/Diana.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--14 { background-image: url('../images/portfolio/Icon_of_the_Seas-scaled.jpg'); background-size: cover; background-position: center; }
+.portfolio-img-bg--15 { background-image: url('../images/portfolio/Mein_Schiff_7.jpg'); background-size: cover; background-position: center; }
 
 .portfolio-img-bg::after {
   content: '';
@@ -1208,7 +1214,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .footer-brand .logo { margin-bottom: 1rem; }
-.footer-brand .logo-img { filter: brightness(0) invert(1); }
+.footer-brand .logo-img { filter: none; }
 .footer-brand .logo-text { color: var(--text-white); }
 .footer-brand p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.45); line-height: 1.7; max-width: 280px; }
 
@@ -1302,8 +1308,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .footer-brand { grid-column: 1 / -1; }
-  .hero-stats { flex-direction: column; gap: 1.5rem; padding: 1.5rem 2rem; }
-  .hero-stat-divider { width: 60px; height: 1px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-content { text-align: center; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-description { margin: 0 auto 2rem; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { flex-direction: row; padding: 0; min-width: auto; }
+  .hero-stat { padding: 1.2rem 1.5rem; width: auto; }
+  .hero-stat-divider { width: 1px; height: 50px; }
   .cta-band__inner { flex-direction: column; text-align: center; }
   .cta-band__actions { justify-content: center; }
 }
