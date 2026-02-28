@@ -375,11 +375,6 @@
   /* ── SERVICE CARD HOVER LINE ─────────────────────────────── */
   // (handled via CSS, nothing extra needed)
 
-  /* ── NAV LINK ACTIVE STYLE ───────────────────────────────── */
-  // Inject active nav style
-  const style = document.createElement('style');
-  style.textContent = `.nav-link.active { color: var(--text-white) !important; }
-  .nav-link.active::after { width: 60% !important; }`;
-  document.head.appendChild(style);
+  /* ── NAV LINK ACTIVE STYLE (handled in CSS) ──────────────── */
 
 })();

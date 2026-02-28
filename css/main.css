@@ -324,6 +324,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .site-header.scrolled .nav-link:hover { color: var(--text-dark); }
 .nav-link:hover::after { width: 60%; }
 
+/* Active section highlight */
+.nav-link.active { color: var(--text-white) !important; }
+.nav-link.active::after { width: 60% !important; }
+.site-header.scrolled .nav-link.active {
+  color: var(--orange) !important;
+  font-weight: 700;
+}
+
 .nav-link--cta {
   background: var(--orange);
   color: #fff !important;
