@@ -695,19 +695,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: var(--bg-light);
   overflow: hidden;
 }
-.services-bg {
+.services-bg { display: none; }
+
+.svc-wave {
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='40'%3E%3Cpath d='M0,20 C25,8 75,32 100,20 C125,8 175,32 200,20' fill='none' stroke='%232D5F8A' stroke-opacity='0.07' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-size: 200px 40px;
-  background-repeat: repeat;
-  animation: svc-wave-bg 10s linear infinite;
+  left: 0;
+  width: 200%;
   pointer-events: none;
+  z-index: 0;
 }
-@keyframes svc-wave-bg {
-  0%   { background-position: 0 0; }
-  100% { background-position: 200px 0; }
+.svc-wave--a { top: 0;   height: 45%; animation: svc-drift 22s linear infinite; }
+.svc-wave--b { top: 22%; height: 45%; animation: svc-drift 30s linear infinite reverse; }
+.svc-wave--c { top: 48%; height: 52%; animation: svc-drift 17s linear infinite; }
+@keyframes svc-drift {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
+.services .container { position: relative; z-index: 1; }
 
 .services-grid {
   display: grid;
