@@ -695,36 +695,18 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: var(--bg-light);
   overflow: hidden;
 }
-.services-bg { display: none; }
-
-.services-wave {
+.services-bg {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='40'%3E%3Cpath d='M0,20 C25,8 75,32 100,20 C125,8 175,32 200,20' fill='none' stroke='%232D5F8A' stroke-opacity='0.07' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-size: 200px 40px;
+  background-repeat: repeat;
+  animation: svc-wave-bg 10s linear infinite;
   pointer-events: none;
 }
-.services-wave svg { display: block; width: 100%; height: 100%; }
-.services-wave--1 {
-  height: 90px;
-  animation: svc-wave 18s linear infinite;
-}
-.services-wave--1 path { fill: rgba(45, 95, 138, 0.07); }
-.services-wave--2 {
-  height: 70px;
-  bottom: 10px;
-  animation: svc-wave 24s linear infinite reverse;
-}
-.services-wave--2 path { fill: rgba(45, 95, 138, 0.05); }
-.services-wave--3 {
-  height: 55px;
-  bottom: 20px;
-  animation: svc-wave 14s linear infinite;
-}
-.services-wave--3 path { fill: rgba(45, 95, 138, 0.035); }
-@keyframes svc-wave {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes svc-wave-bg {
+  0%   { background-position: 0 0; }
+  100% { background-position: 200px 0; }
 }
 
 .services-grid {
