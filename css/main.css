@@ -697,6 +697,36 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .services-bg { display: none; }
 
+.services-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  pointer-events: none;
+}
+.services-wave svg { display: block; width: 100%; height: 100%; }
+.services-wave--1 {
+  height: 90px;
+  animation: svc-wave 18s linear infinite;
+}
+.services-wave--1 path { fill: rgba(45, 95, 138, 0.07); }
+.services-wave--2 {
+  height: 70px;
+  bottom: 10px;
+  animation: svc-wave 24s linear infinite reverse;
+}
+.services-wave--2 path { fill: rgba(45, 95, 138, 0.05); }
+.services-wave--3 {
+  height: 55px;
+  bottom: 20px;
+  animation: svc-wave 14s linear infinite;
+}
+.services-wave--3 path { fill: rgba(45, 95, 138, 0.035); }
+@keyframes svc-wave {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
