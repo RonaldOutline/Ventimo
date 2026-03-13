@@ -342,6 +342,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: var(--orange-dark);
   transform: translateY(-1px);
 }
+.site-header.scrolled .nav-link--cta,
+.site-header.scrolled .nav-link--cta:hover { color: #fff !important; }
 
 .nav-toggle {
   display: none;
