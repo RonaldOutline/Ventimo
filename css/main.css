@@ -1159,24 +1159,35 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* Checkbox */
-.form-group--checkbox { flex-direction: row; align-items: flex-start; gap: 0; }
+.form-group--checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+.form-group--checkbox:focus-within {
+  border-color: var(--orange);
+}
 .checkbox-label {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 1rem;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-body);
   line-height: 1.5;
   cursor: pointer;
   text-transform: none;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 .checkbox-label input[type="checkbox"] { display: none; }
 .checkbox-custom {
-  width: 20px; height: 20px; min-width: 20px;
-  border: 1.5px solid var(--border);
+  width: 26px; height: 26px; min-width: 26px;
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--white);
   transition: var(--transition);
@@ -1190,9 +1201,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .checkbox-label input:checked + .checkbox-custom::after {
   content: '';
   position: absolute;
-  left: 5px; top: 2px;
-  width: 8px; height: 12px;
-  border: 2px solid #fff;
+  left: 7px; top: 3px;
+  width: 9px; height: 13px;
+  border: 2.5px solid #fff;
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
