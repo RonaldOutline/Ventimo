@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Ventimo</title>
+  <link rel="icon" type="image/png" href="https://outline.ee/kliendid/VentimoFi/wp-content/uploads/2025/06/VE_icon.png" />
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     .policy-page {
       max-width: 800px;
@@ -12,7 +16,7 @@
       padding: 6rem 2rem 4rem;
     }
     .policy-page h1 {
-      font-family: var(--font-heading);
+      font-family: var(--font-head);
       font-size: clamp(2rem, 4vw, 3rem);
       color: var(--text-dark);
       margin-bottom: 0.5rem;
@@ -23,7 +27,7 @@
       margin-bottom: 3rem;
     }
     .policy-page h2 {
-      font-family: var(--font-heading);
+      font-family: var(--font-head);
       font-size: 1.25rem;
       color: var(--text-dark);
       margin: 2.5rem 0 0.75rem;
@@ -54,20 +58,35 @@
 </head>
 <body>
 
-  <header class="header" id="header">
-    <div class="container header__inner">
+  <header class="site-header scrolled" id="site-header">
+    <div class="nav-container">
       <a href="index.html" class="logo">
-        <span class="logo-text">VENTIMO</span>
+        <img src="images/logos/VentimoLogoWhite.svg" alt="Ventimo" class="logo-img logo-img--light" />
+        <img src="images/logos/VentimoLogoRed2.svg"  alt="Ventimo" class="logo-img logo-img--dark" />
       </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#services" class="nav-link">Services</a></li>
+          <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="index.html#careers" class="nav-link">Careers</a></li>
+          <li><a href="index.html#contact" class="nav-link nav-link--cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main>
     <div class="policy-page">
 
-      <a href="index.html#contact" class="policy-back">
+      <a href="index.html" class="policy-back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        Back to Contact
+        Back to Ventimo
       </a>
 
       <h1>Privacy Policy</h1>
@@ -120,5 +139,57 @@
     </div>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo logo--footer">
+              <img src="images/logos/VentimoLogoWhite.svg" alt="Ventimo" class="logo-img" />
+            </a>
+            <p>Finnish maritime construction excellence since 2004. Building the world's most iconic vessels.</p>
+          </div>
+
+          <div class="footer-nav">
+            <h4 class="footer-nav__title">Company</h4>
+            <ul>
+              <li><a href="index.html#about">About Ventimo</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#portfolio">Portfolio</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <h4 class="footer-nav__title">Services</h4>
+            <ul>
+              <li><a href="index.html#services">New Build Outfitting</a></li>
+              <li><a href="index.html#services">Renovation &amp; Refit</a></li>
+              <li><a href="index.html#services">Systems Engineering</a></li>
+              <li><a href="index.html#services">Interior Construction</a></li>
+              <li><a href="index.html#services">Structural Steelwork</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h4 class="footer-nav__title">Contact</h4>
+            <p>Helsinki, Finland</p>
+            <p><a href="tel:+35810000000">+358 (0) 10 000 0000</a></p>
+            <p><a href="mailto:info@ventimo.fi">info@ventimo.fi</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2025 Ventimo Oy. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
