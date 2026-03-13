@@ -1005,6 +1005,78 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex-wrap: wrap;
 }
 
+/* ── CAREERS STRIPE ─────────────────────────────────────────── */
+.careers-stripe {
+  background: #f0f2f7;
+  border-top: 1px solid rgba(26, 42, 94, 0.1);
+  border-bottom: 1px solid rgba(26, 42, 94, 0.1);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+.careers-stripe__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.careers-stripe__left { flex: 1; }
+.careers-stripe__label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #c07a1a;
+  margin-bottom: 0.4rem;
+}
+.careers-stripe__heading {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+.careers-stripe__lead {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 0 0.85rem;
+  line-height: 1.6;
+}
+.careers-stripe__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.careers-pill {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border: 0.5px solid rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+.careers-stripe__right { flex-shrink: 0; }
+.careers-stripe__btn {
+  display: inline-block;
+  background: #1a2a5e;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+.careers-stripe__btn:hover { background: #253f8a; }
+
 /* ── CONTACT ────────────────────────────────────────────────── */
 .contact {
   padding: 8rem 0;
@@ -1355,6 +1427,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .hero-stat-divider { width: 1px; height: 50px; }
   .cta-band__inner { flex-direction: column; text-align: center; }
   .cta-band__actions { justify-content: center; }
+  .careers-stripe__inner { flex-direction: column; gap: 1.5rem; padding: 2rem 1.5rem; }
+  .careers-stripe__right { width: 100%; }
+  .careers-stripe__btn { display: block; text-align: center; }
 }
 
 @media (max-width: 768px) {
